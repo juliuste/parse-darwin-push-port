@@ -1,6 +1,6 @@
 {
 	"name": "parse-darwin-push-port",
-	"description": "",
+	"description": "Parse “Darwin Push Port“ datasets into duplicate-free ndjson.",
 	"version": "0.0.0",
 	"bin": {
 		"darwin-merge": "./merge/script.sh",
