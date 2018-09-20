@@ -1,0 +1,44 @@
+{
+	"name": "parse-darwin-push-port",
+	"description": "",
+	"version": "0.0.0",
+	"bin": {
+		"darwin-merge": "./merge/script.sh",
+		"darwin-delays": "node ./delays.js > delays.ndjson",
+		"darwin-schedules": "node ./schedules.js > schedules.ndjson",
+		"darwin-combine": "node ./combine.js > full.ndjson",
+		"darwin-full": "darwin-merge && darwin-delays && darwin-schedules && darwin-combine;",
+		"darwin-stats": "node ./stats.js"
+	},
+	"keywords": [],
+	"author": "Julius Tens <mail@juliustens.eu>",
+	"homepage": "https://github.com/juliuste/parse-darwin-push-port",
+	"repository": "juliuste/parse-darwin-push-port",
+	"bugs": "https://github.com/juliuste/parse-darwin-push-port/issues",
+	"dependencies": {
+		"level": "^4.0.0",
+		"lodash": "^4.17.11",
+		"moment-timezone": "^0.5.21",
+		"ndjson": "^1.5.0",
+		"pify": "^4.0.0",
+		"split": "^1.0.1",
+		"stream-to-promise": "^2.2.0",
+		"through2-filter": "^3.0.0",
+		"through2-map": "^3.0.0",
+		"tmp": "0.0.33",
+		"xml-js": "^1.6.7"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"merge": "./merge/script.sh",
+		"delays": "node ./delays.js > delays.ndjson",
+		"schedules": "node ./schedules.js > schedules.ndjson",
+		"combine": "node ./combine.js > full.ndjson",
+		"full": "npm run merge && npm run delays && npm run schedules && npm run combine",
+		"stats": "node ./stats.js"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"license": "ISC"
+}
